@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FreshCart
 
-## Getting Started
+FreshCart is scaffolded with Next.js App Router and TypeScript. The route groups below mirror the screens found in the linked Figma file. Screen UI and production data behavior remain to be implemented from the Figma designs.
 
-First, run the development server:
+## Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+src/
+  app/
+    (store)/                Storefront layout and shopping routes
+    (account)/              Account, profile, orders, and wishlist
+    (auth)/                 Login, signup, and password recovery
+  components/
+    home/                   Homepage carousel and sections
+    layout/                 Shared navbar and storefront shell
+    shared/                 Reusable cross-feature pieces
+    ui/                     UI primitives
+  features/
+    account/ auth/ cart/ catalog/ checkout/ home/
+  hooks/                    Shared React hooks
+  lib/                      Shared utilities and service clients
+  types/                    Shared TypeScript types
+  constants/                Shared constants
+public/
+  icons/                    Local icon assets
+  images/                   Local product and marketing images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Figma screen mapping
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Figma file includes responsive Mobile, Tablet, and Desktop designs for the home, products, product details, categories, brands, search, cart, checkout, login, sign up, password recovery, addresses, profile settings, wishlist, and orders screens. Keep responsive variants in the same route and implement them with responsive layouts rather than separate URLs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` — start the local development server
+- `npm run build` — build the production app
+- `npm run lint` — lint the project
