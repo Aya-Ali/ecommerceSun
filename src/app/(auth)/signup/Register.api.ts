@@ -4,7 +4,7 @@ export async function registerApi(data) {
 
 
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/auth/signup`, {
+    const res = await fetch(`${process.env.BASE_URL}/api/v1/auth/signup`, {
         method: 'post',
         body: JSON.stringify(data),
         headers: {

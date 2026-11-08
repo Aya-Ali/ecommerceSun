@@ -13,7 +13,7 @@ export const nextAuthConfig: NextAuthOptions = {
             async authorize(data) {
 
 
-                const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/auth/signin`, {
+                const response = await fetch(`${process.env.BASE_URL}/api/v1/auth/signin`, {
                     method: "post",
                     body: JSON.stringify(data),
                     headers: {

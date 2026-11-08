@@ -72,7 +72,7 @@ export async function PaymentOrder(obj, cartID) {
         shippingAddress: obj
     }
 
-    const res = await fetch(`${process.env.BASE_URL}/api/v1/orders/checkout-session/${cartID}?url=http://localhost:3000`, {
+    const res = await fetch(`${process.env.BASE_URL}/api/v1/orders/checkout-session/${cartID}?url=https://ecommerce-sun-delta.vercel.app/`, {
         method: "POST",
         body: JSON.stringify(orderBody),
         headers: {
